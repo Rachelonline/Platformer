@@ -7,44 +7,51 @@ public class PlayerMovement : MonoBehaviour
     public Joystick joystick;
     public CharacterController2D controller;
     public Animator animator;
-    
-    public float horizontalMove;
-    public bool crouch = false;
-    public bool jump = false;
-    public float speed = 15;
 
-    // Update is called once per frame
+    public float horizontalMove;
+    public bool isJumping;
+    public bool isCrouching;
+    public bool canJump = true;
+    public float speed = 0.5f;
+
     void Update()
     {
         horizontalMove = joystick.Horizontal * speed;
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+        animator.SetBool("Crouching", isCrouching);
+        animator.SetBool("Jumping", isJumping);
+
         if(joystick.Vertical >= 0.5f)
         {
-            jump = true;
-            animator.SetBool("isJumping", true);
-            crouch = false;
-            animator.SetBool("isCrouching", false);
+            if (canJump)
+            {
+                isJumping = true;
+                canJump = false;
+                Invoke("StopJumping", 0.5f);
+            }
+            isCrouching = false;
         }
         else if(joystick.Vertical <= -0.5f)
         {
-            jump = false;
-            crouch = true;
-            animator.SetBool("isCrouching", true);
+            isJumping = false;
+            canJump = true;
+            isCrouching = true;
         }
         else
         {
-            jump = false;
-            crouch = false;
-            animator.SetBool("isCrouching", false);
+            isJumping = false;
+            canJump = true;
+            isCrouching = false;
         }
     }
-    void FixedUpdate()
+
+    public void StopJumping()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        isJumping = false;
     }
 
-    public void OnLand()
+    void FixedUpdate()
     {
-        animator.SetBool("isJumping", false);
+        controller.Move(horizontalMove, isCrouching, isJumping);
     }
 }
