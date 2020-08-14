@@ -37,12 +37,16 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\CharacterController2D.cs" />
+     <Compile Include="Assets\CompleteLevel.cs" />
+     <Compile Include="Assets\EndTrigger.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
      <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
+     <Compile Include="Assets\PlayerCollision.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
+     <Compile Include="Assets\SwitchScene.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -583,6 +587,9 @@
     <Reference Include="Unity.Timeline.Editor">
         <HintPath>C:/Users/kawai/Documents/SAFE App Development Course 2020/Adventurer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>C:/Users/kawai/Documents/SAFE App Development Course 2020/Adventurer/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Animation.Runtime">
         <HintPath>C:/Users/kawai/Documents/SAFE App Development Course 2020/Adventurer/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
@@ -646,6 +653,9 @@
     <Reference Include="Unity.2D.Animation.Editor">
         <HintPath>C:/Users/kawai/Documents/SAFE App Development Course 2020/Adventurer/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>C:/Users/kawai/Documents/SAFE App Development Course 2020/Adventurer/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mathematics.Editor">
         <HintPath>C:/Users/kawai/Documents/SAFE App Development Course 2020/Adventurer/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
@@ -660,12 +670,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>C:/Users/kawai/Documents/SAFE App Development Course 2020/Adventurer/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-        <HintPath>C:/Users/kawai/Documents/SAFE App Development Course 2020/Adventurer/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-        <HintPath>C:/Users/kawai/Documents/SAFE App Development Course 2020/Adventurer/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

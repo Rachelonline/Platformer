@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Default Brush
   m_EditorClassIdentifier: 
   m_Cells:
-  - m_Tile: {fileID: 11400000, guid: 138f662fd9e54764a8766fa1496c5094, type: 2}
+  - m_Tile: {fileID: 11400000, guid: b3ae2c8a45080274c96c0b56b3ac181e, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
       e32: 0
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
-  - m_Tile: {fileID: 11400000, guid: 212d9c86c3d46ae4ba53b396dda91ef4, type: 2}
+  - m_Tile: {fileID: 11400000, guid: bc52d9eedb6c6b043be355347d80eea4, type: 2}
     m_Matrix:
       e00: 1
       e01: 0
@@ -52,5 +52,5 @@ MonoBehaviour:
       e33: 1
     m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Size: {x: 1, y: 2, z: 1}
-  m_Pivot: {x: 0, y: 0, z: 0}
+  m_Pivot: {x: 0, y: 1, z: 0}
   m_CanChangeZPosition: 0

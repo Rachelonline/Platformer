@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = false;
             canJump = true;
             isCrouching = true;
+            horizontalMove = 0f;
         }
         else
         {
